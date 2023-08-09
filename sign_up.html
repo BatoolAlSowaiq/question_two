@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Form</title>
+  <script>
+    function Submit(event) {
+      event.preventDefault(); 
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var message = "Congratulations, " + firstName + " " + lastName + " you are now signed up!";
+      document.getElementById("message").innerText = message;
+    }
+  </script>
+  <link rel="style" type="text/css" href="./style.css"
+</head>
+<body>
+  <h1>Sign Up Form Example</h1>
+  <div class="sign_up_form">
+  <table  colspan="2">
+    <form onsubmit="Submit(event)">
+      <tr>
+        <td><label for="name">First, Last Name*:</label></td>
+        <td>
+          <input type="text" id="firstName" name="firstName" required>
+          <input type="text" id="lastName" name="lastName" required>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="organization">Organization:</label></td>
+        <td><input type="text" id="organization" name="organization"></td>
+        
+      </tr>
+      <tr>
+        <td><label for="email">Email Address*:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="workPhone">Work Phone:</label></td>
+        <td><input type="tel" id="workPhone" name="workPhone"></td>
+      </tr>
+      <tr>
+        <td><label for="homePhone">Home Phone:</label></td>
+        <td><input type="tel" id="homePhone" name="homePhone"></td>
+      </tr>
+      <tr>
+        <td><label for="cellPhone">Cell Phone:</label></td>
+        <td><input type="tel" id="cellPhone" name="cellPhone"></td>
+      </tr>
+      <tr>
+        <td><label for="fax">Fax:</label></td>
+        <td><input type="tel" id="fax" name="fax"></td>
+      </tr>
+      <tr>
+        <td><label for="address1">Address 1*:</label></td>
+        <td><input type="text" id="address1" name="address1" required></td>
+      </tr>
+      <tr>
+        <td><label for="address2">Address 2:</label></td>
+        <td><input type="text" id="address2" name="address2"></td>
+      </tr>
+      <tr>
+        <td><label for="city">City*:</label></td>
+        <td><input type="text" id="city" name="city" required></td>
+      </tr>
+      <tr>
+        <td><label for="stateProvince">State Province:</label></td>
+        <td><input type="text" id="stateProvince" name="stateProvince"></td>
+      </tr>
+      <tr>
+        <td><label for="zip">Zip Postal Code:</label></td>
+        <td><input type="text" id="zip" name="zip"></td>
+      </tr>
+      <tr>
+        <td><label for="country">Country*:</label></td>
+        <td><input type="text" id="country" name="country" required></td>
+      </tr>
+      <tr>
+        <td><label for="required">*. required fields</label><br></td>
+        <td><input type="submit" value="Submit"></td>
+        <td><a href="sign_up.html" target="_blank">Forms</a></td></tr>
+
+    </form>
+  </table>
+  <div id="message"></div>
+</div>
+</body>
+</html>
